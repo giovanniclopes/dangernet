@@ -1,0 +1,231 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;700&family=Oswald:wght@300;400;500;700&display=swap');
+
+:root {
+    --primary-color: #ffce00;
+    --secundary-color: #1f1f1f;
+    --terciary-color: #786000;
+    --light-color: #bcbcbc;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    background: var(--secundary-color);
+    font-family: var(--text-font);
+}
+
+/*menu*/
+
+#logo-image {
+    width: 50%;
+}
+
+#header {
+    z-index: 1000;
+    box-sizing: border-box;
+    height: 80px;
+    padding: 15px 50px 15px 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--primary-color);
+}
+
+#menu {
+    display: flex;
+    list-style: none;
+    gap: 10px;
+}
+
+#menu .home-menu-item {
+  color: var(--secundary-color);
+}
+
+#menu a {
+    margin-top: 13px;
+    font-size: 1em;
+    font-weight: 500;
+    display: block;
+    padding: 15px;
+    color: var(--secundary-color);
+    text-decoration: none;
+    border-radius: 10px;
+}
+
+#menu a:hover {
+    filter: brightness(70%);
+    transition: .4s ease;
+}
+
+#menu .menu-item::after {    
+    content: "";
+    background: none repeat scroll 0 0 transparent;
+    display: block;
+    height: 2px;
+    margin-top: 10px;
+    left: 50%;
+    background: currentColor;
+    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+    width: 0;
+    border-radius: 200px;
+}
+
+#menu .menu-item:hover::after { 
+    width: 100%; 
+    left: 0;
+  }
+  
+#btn-mobile {
+    display: none;
+}
+
+@media (max-width: 600px) {
+    #header {
+      padding: 0 10px 0 10px;
+      background: var(--primary-color);
+    }
+
+    #logo-image {
+        width: 3em;
+    }    
+    #menu {
+        display: block;
+        position: absolute;
+        width: 100%;
+        top: 75px;
+        right: 0px;
+        background: var(--primary-color);
+        border-radius: 5px;
+        transition: .6s;
+        z-index: 1000;
+        height: 0px;
+        visibility: hidden;
+        overflow-y: hidden;
+    }
+    #nav.active #menu {
+        height: calc(100vh - 30vh);
+        visibility: visible;
+        overflow-y: auto;
+    }
+    #menu a {
+        padding: 25px 0;
+        font-size: 1em;
+        margin: 0 20px;
+        border-bottom: 2px solid rgba(54, 54, 54, 0.1);
+        border-radius: 5px;
+    }
+    #btn-mobile {
+        color: var(--secundary-color);
+        display: flex;
+        padding: 10px 20px;
+        font-size: 18px;
+        border: none;
+        background: none;
+        cursor: pointer;
+        gap: 10px;
+    }
+    #hamburguer {
+        color: var(--secundary-color);
+        display: block;
+        border-top: 2px solid;
+        width: 20px;
+    }
+    #hamburguer::after, #hamburguer::before {
+        content: '';
+        position: relative;
+        display: block;
+        width: 20px;
+        height: 2px;
+        border-radius: 10px;
+        background-color: currentColor;
+        margin-top: 5px;
+        transition: .3s;
+    }
+    #nav.active #hamburguer {
+        border-top-color: transparent;
+    }
+    #nav.active #hamburguer::before {
+        transform: rotate(135deg);
+    }
+    #nav.active #hamburguer::after {
+        transform: rotate(-135deg);
+        top: -7px;
+    }
+    #menu a:hover::after { 
+        width: 28%; 
+        left: 0;
+      }    
+}
+/*end menu*/
+
+#first-section {
+    background: url(images/section1.jpg);
+    height: 85vh;
+    padding: 20px;
+    font-size: 1.5em;
+    font-weight: bold;
+    color: var(--light-color);
+    text-align: center;
+    line-height: 30px;
+}
+
+@media (max-width: 600px) {
+    #first-section {
+        line-height: normal;
+        font-size: 1.3em;
+    }
+}
+
+#first-section h1 {
+    padding-top: 180px;
+    font-size: 1.9em;
+    color: var(--primary-color);
+    text-transform: uppercase;
+}
+
+@media (max-width: 600px) {
+    #first-section h1 {
+        padding-top: 30px;
+    }
+}
+
+#double-div {
+    display: flex;
+    text-align: center;
+    padding: 20px 0 20px;
+}
+
+.left-div {
+    float: left;
+    width: 50%;
+}
+
+.left-div h2 {
+    color: var(--primary-color);
+}
+
+.left-div p {
+    color: #fff;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+.right-div {
+    float: right;
+    width: 50%;
+}
+
+.right-div h2 {
+    color: var(--primary-color);
+}
+
+.right-div p {
+    color: #fff;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+.svg-second-div {
+    width: 80px;
+}
