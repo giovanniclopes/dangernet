@@ -29,7 +29,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background: var(--primary-color);
+    background: linear-gradient(-45deg, #ffce00,#be9800, #836900);
 }
 
 #menu {
@@ -45,7 +45,7 @@ body {
 #menu a {
     margin-top: 13px;
     font-size: 1em;
-    font-weight: 500;
+    font-weight: 700;
     display: block;
     padding: 15px;
     color: var(--secundary-color);
@@ -95,7 +95,7 @@ body {
         width: 100%;
         top: 75px;
         right: 0px;
-        background: var(--primary-color);
+        background: linear-gradient(45deg, #ffce00,#be9800);
         border-radius: 5px;
         transition: .6s;
         z-index: 1000;
@@ -184,10 +184,24 @@ body {
     text-transform: uppercase;
 }
 
+#first-section p {
+    font-size: 1em;
+}
+
 @media (max-width: 600px) {
     #first-section h1 {
-        padding-top: 30px;
+        padding-top: 70px;
+        font-size: 1.6em;
     }
+    #first-section p {
+        font-size: .9em;
+    }
+}
+
+/* second section */
+
+#second-section {
+    padding-bottom: 50px;
 }
 
 #double-div {
@@ -227,5 +241,140 @@ body {
 }
 
 .svg-second-div {
-    width: 80px;
+    width: 90px;
+}
+
+@media (max-width: 600px) {
+    .right-div h2, .left-div h2 {
+        font-size: 1.1em;
+    }
+    .right-div p, .left-div p {
+        padding: 10px;
+        font-size: 1em;
+    }
+    .svg-second-div {
+        width: 65px;
+    }
+}
+
+/* third section */
+
+#third-section {
+    padding: 130px 0 60px 0;
+    background: url(images/section3.webp);
+    text-align: center;
+}
+
+.svg-articles {
+    margin-bottom: -40px;
+}
+
+.alert-section2 {
+    transition: .4s;
+}
+
+.alert-section2:hover {
+    animation: floating 3s infinite ease-in-out;
+}
+
+#third-section h2 {
+    text-transform: uppercase;
+    font: bold 2.5em 'Open Sans', sans-serif;
+    color: var(--primary-color);
+    margin: 70px;
+}
+
+#all-articles-home {
+    display: flex;
+    align-items: center;
+    align-content: center;
+}
+
+@media (max-width: 600px) {
+    #all-articles-home {
+        display: grid;
+    }
+}
+
+.deepweb-article, .invpriv-article, .lgpd-article, .roubodados-article {
+    background: #fff;
+    padding-top: 20px;
+    margin: 15px;
+    width: 100%;
+    text-align: center;
+    border-radius: 5px;
+    animation: floating2 3s infinite ease-in-out;
+}
+
+.deepweb-article:hover, .invpriv-article:hover, .lgpd-article:hover, .roubodados-article:hover {
+    animation: floating 3s infinite ease-in-out;
+    transition: .4s;
+}
+
+@media (max-width: 600px) {
+    .deepweb-article, .invpriv-article, .lgpd-article, .roubodados-article {
+        text-align: center;
+        width: 80%;
+        margin-left: 15px;
+    }    
+}
+
+@keyframes floating {
+    0% { transform: translate(0,  0px); }
+    50%  { transform: translate(0, 15px); }
+    100%   { transform: translate(0, -0px); }   
+}
+@keyframes floating2 {
+    0% { transform: translate(0,  0px); }
+    50%  { transform: translate(0,2px); }
+    100%   { transform: translate(0, -0px); }   
+}
+
+
+.deepweb-article {
+    background: linear-gradient(120deg, #0a0a0a, #131313);
+}
+
+.invpriv-article {
+    background: linear-gradient(80deg, #0A0A0A, #07232B);
+}
+
+.lgpd-article {
+    background: #02A7EF;
+}
+
+.roubodados-article {
+    background: #00BECE;
+}
+
+.deepweb-column2, .invpriv-column2, .lgpd-column2, .roubodados-column2 {
+    background: rgb(243, 243, 243);
+    padding: 20px 10px 20px 10px;
+    border-radius: 0 0 5px 5px;
+}
+
+hr {
+    width: 30%;
+}
+
+.deepweb-article button, .invpriv-article button, .lgpd-article button, .roubodados-article button {
+    width: 100%;
+    border: none;
+    outline: none;
+    background: var(--primary-color);
+    padding: 15px;
+    border-radius: 10px;
+    font: inherit;
+    font-weight: bold;
+}
+
+.deepweb-article button:hover, .invpriv-article button:hover, .lgpd-article button:hover, .roubodados-article button:hover {
+    cursor: pointer;
+    filter: brightness(80%);
+}
+
+@media (max-width: 600px) {
+    .deepweb-article button, .invpriv-article button, .lgpd-article button, .roubodados-article button {
+        padding: 20px;
+    }
 }
