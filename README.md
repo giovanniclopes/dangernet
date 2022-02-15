@@ -6,7 +6,7 @@
 
 Aqui você irá descobrir os mistérios e as verdades pro trás da grande internet.
 
-## :warning: Sobre o projeto
+## [Logo](images/dangernet-logo.png) Sobre o projeto
 Este site foi idealizado em 2021, e está sendo feito até o momento. Este site tem como objetivo mostrar um pouco dos perigos que a internet oferece.
 
 [![MIT-LICENSE](https://img.shields.io/apm/l/vim-mode)](#)
