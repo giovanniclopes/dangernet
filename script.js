@@ -1,6 +1,4 @@
-
 const btnMobile = document.getElementById('btn-mobile');
-
 function toggleMenu(event) {
   if (event.type === 'touchstart') event.preventDefault();
   const nav = document.getElementById('nav');
@@ -13,6 +11,24 @@ function toggleMenu(event) {
     event.currentTarget.setAttribute('aria-label', 'Abrir Menu')
   }
 }
-
 btnMobile.addEventListener('click', toggleMenu);
 btnMobile.addEventListener('touchstart', toggleMenu);
+mybutton = document.getElementById("myBtn");
+window.onscroll = function() {scrollFunction()};
+
+/*back to top button */
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+
+
+window.navigator.vibrate(200);

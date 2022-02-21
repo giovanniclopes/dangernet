@@ -2,9 +2,11 @@
 
 :root {
     --primary-color: #ffce00;
-    --secundary-color: #1f1f1f;
+    --secundary-color: #1a1612;
     --terciary-color: #786000;
     --light-color: #bcbcbc;
+    --title-font: 'Open Sans', sans-serif;
+    --text-font: 'Oswald', sans-serif;
 }
 
 body {
@@ -13,6 +15,7 @@ body {
     width: 100%;
     background: var(--secundary-color);
     font-family: var(--text-font);
+    color: var(--secundary-color);
 }
 
 /*menu*/
@@ -24,12 +27,12 @@ body {
 #header {
     z-index: 1000;
     box-sizing: border-box;
-    height: 80px;
+    height: 85px;
     padding: 15px 50px 15px 100px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background: linear-gradient(-45deg, #ffce00,#be9800, #836900);
+    background: var(--primary-color);
 }
 
 #menu {
@@ -48,6 +51,8 @@ body {
     font-weight: 700;
     display: block;
     padding: 15px;
+    font-family: var(--title-font);
+    font-size: 16px;
     color: var(--secundary-color);
     text-decoration: none;
     border-radius: 10px;
@@ -95,7 +100,7 @@ body {
         width: 100%;
         top: 75px;
         right: 0px;
-        background: linear-gradient(45deg, #ffce00,#be9800);
+        background: var(--primary-color);
         border-radius: 5px;
         transition: .6s;
         z-index: 1000;
@@ -160,8 +165,8 @@ body {
 /*end menu*/
 
 #first-section {
-    background: url(images/section1.jpg);
-    height: 85vh;
+    background: url(images/section1.jpg) fixed;
+    height: 86vh;
     padding: 20px;
     font-size: 1.5em;
     font-weight: bold;
@@ -179,13 +184,14 @@ body {
 
 #first-section h1 {
     padding-top: 180px;
-    font-size: 1.9em;
+    font-size: 2.7em;
     color: var(--primary-color);
     text-transform: uppercase;
 }
 
 #first-section p {
-    font-size: 1em;
+    font-size: 1.2em;
+    color: #fff;
 }
 
 @media (max-width: 600px) {
@@ -212,7 +218,7 @@ body {
 
 .left-div {
     float: left;
-    width: 50%;
+    max-width: 50%;
 }
 
 .left-div h2 {
@@ -227,7 +233,7 @@ body {
 
 .right-div {
     float: right;
-    width: 50%;
+    max-width: 50%;
 }
 
 .right-div h2 {
@@ -257,7 +263,7 @@ body {
     }
 }
 
-/* third section */
+/* articles section */
 
 #third-section {
     padding: 130px 0 60px 0;
@@ -298,11 +304,13 @@ body {
 
 .deepweb-article, .invpriv-article, .lgpd-article, .roubodados-article {
     background: #fff;
+    border: 1px solid var(--primary-color);
     padding-top: 20px;
     margin: 15px;
     width: 100%;
     text-align: center;
-    border-radius: 5px;
+    border-radius: 10px;
+    box-shadow: 20px 10px 5px rgba(0, 0, 0, 0.37);
     animation: floating2 3s infinite ease-in-out;
 }
 
@@ -326,7 +334,7 @@ body {
 }
 @keyframes floating2 {
     0% { transform: translate(0,  0px); }
-    50%  { transform: translate(0,2px); }
+    50%  { transform: translate(0,5px); }
     100%   { transform: translate(0, -0px); }   
 }
 
@@ -355,6 +363,9 @@ body {
 
 hr {
     width: 30%;
+    border: 1px solid #808080;
+    border-radius: 20px;
+    outline: none;
 }
 
 .deepweb-article button, .invpriv-article button, .lgpd-article button, .roubodados-article button {
@@ -378,3 +389,88 @@ hr {
         padding: 20px;
     }
 }
+
+/* fourth section */
+
+#fourth-section {
+    display: flex;
+    padding: 0 80px 0 80px;
+    text-align: center;
+    
+}
+
+.about-us-image-column {
+    float: left;
+    max-width: 50%;
+}
+
+.about-us-image-column img{
+    width:37.5em;
+}
+
+.about-us-text-column {
+    float: right;
+    margin: 130px auto auto 40px;
+    max-width: 50%;
+}
+.about-us-text-column h2 {
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    font-size: 4em;
+    color: var(--primary-color);
+}
+
+.about-us-text-column p {
+    color: #fff;
+    font-size: 1.4em;
+    font-weight: 300;
+}
+
+
+
+
+
+
+/* footer */
+
+#myBtn {
+    display: none; 
+    position: fixed; 
+    bottom: 20px;
+    right: 10px; 
+    z-index: 999;
+    width: 65px;
+    background: var(--bc-color);
+    border: none; 
+    outline: none; 
+    cursor: pointer; 
+    border-radius: 200px;
+    opacity: 100%;
+    transition: opacity .5s;
+  }
+
+  #myBtn:hover {
+    opacity: 60%;
+  }
+
+/* scrollbar style */
+
+::-webkit-scrollbar {
+      background: var(--primary-color);
+  }
+
+  ::-webkit-scrollbar-track {
+      border-radius: 200px;
+      background: #131313;
+  }
+
+  ::-webkit-scrollbar-thumb {
+      background: #696969;
+      border-radius: 5px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+      background: #6d684f;
+  }
+  ::-webkit-scrollbar-thumb:active {
+    background: var(--primary-color);
+    }
