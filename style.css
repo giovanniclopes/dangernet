@@ -599,9 +599,25 @@ hr {
 
 
 #seventh-section {
+    margin: 200px 0 50px 0;
     color: #fff;
-    font: 500 1.1em var(--text-font);
-    margin: 100px 0;
+    font: 500 1.1em var(--title-font);
+}
+
+#seventh-section > hr {
+    width: 20%;
+}
+
+#seventh-section > h2 {
+    text-align: center;
+    font: normal 4em var(--text-font);
+    color: var(--primary-color);
+    margin-bottom: 0;
+}
+
+#seventh-section > p {
+    text-align: center;
+    font: normal .9em var(--title-font);
 }
 
 .form-span {
@@ -609,10 +625,50 @@ hr {
 }
 
 #form {
-    margin-left: 550px;
-    padding: 10px;
+    margin-left: 90px;
+    padding-top: 30px;
+    transition: margin .5s, padding .5s;
 }
 
+#form label {
+    padding-bottom: 10px;
+}
+
+#form input, textarea {
+    margin: 3px auto 12px auto;
+    width: 90%;
+    padding: 12px 7px 12px 7px;
+    border: none;
+    border-radius: 3px;
+    outline: none;
+    font: normal .9em var(--title-font);
+}
+
+::placeholder {
+    text-transform: none;
+    font: normal .9em var(--title-font);
+}
+
+#name {
+    text-transform: capitalize;
+}
+
+#contact-btn {
+    width: 91.2%;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    background: var(--primary-color);
+    font: normal 1.1em var(--text-font);
+    padding: 15px;
+    cursor: pointer;
+    transition: .4s;
+
+}
+
+#contact-btn:hover {
+    filter: brightness(75%);
+}
 /* footer */
 #footer {
     display: flex;
@@ -647,6 +703,10 @@ hr {
 
   #myBtn:hover {
     opacity: 75%;
+  }
+
+  #myBtn:active {
+    transform: translateY(5px);
   }
 
 /* scrollbar style */
