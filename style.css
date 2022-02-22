@@ -19,10 +19,10 @@ body {
 }
 
 /*menu*/
-
 #logo-image {
-    width: 50%;
+    width: 60%;
 }
+
 
 #header {
     z-index: 1000;
@@ -47,11 +47,10 @@ body {
 
 #menu a {
     margin-top: 13px;
-    font-size: 1.2em;
     font-weight: 700;
     display: block;
     padding: 15px;
-    font: 500 1em var(--title-font);
+    font: 500 1.1em var(--title-font);
     color: var(--secundary-color);
     text-decoration: none;
     border-radius: 10px;
@@ -60,6 +59,10 @@ body {
 #menu a:hover {
     filter: brightness(75%);
     transition: .4s ease;
+}
+
+#menu a:active {
+    transform: translateY(5px);
 }
 
 #menu .menu-item::after {    
@@ -262,10 +265,10 @@ body {
     }
 }
 
-/* articles section */
+/* articles section - articles */
 
 #third-section {
-    padding: 130px 0 60px 0;
+    padding: 130px 0 100px 0;
     background: url(images/section3.webp);
     text-align: center;
 }
@@ -389,11 +392,11 @@ hr {
     }
 }
 
-/* fourth section */
+/* fourth section - about us */
 
 #fourth-section {
     display: flex;
-    padding: 0 80px 0 80px;
+    padding: 50px 80px 0px 80px;
     text-align: center;
 }
 
@@ -408,8 +411,8 @@ hr {
     max-width: 50%;
 }
 
-.about-us-image-column img{
-    width:37.5em;
+.about-us-image-column > img{
+    width:39em;
 }
 
 .about-us-text-column {
@@ -424,19 +427,19 @@ hr {
     color: var(--primary-color);
 }
 
-.about-us-text-column p {
+.about-us-text-column > p {
     color: #fff;
     font-size: 1.4em;
     font-weight: 300;
 }
 
-.about-us-text-column button, a {
+.about-us-text-column > button {
     background: var(--primary-color);
     font: normal 1.1em var(--text-font);
     color: #000;
     text-decoration: none;
-    padding: 11px 0 13px 0;
-    width: 45%;
+    padding: 13px 0 15px 0;
+    width: 50%;
     border: none;
     border-radius: 8px;
     outline: none;
@@ -448,7 +451,167 @@ hr {
     animation: floating2 5s infinite ease-in-out;
 }
 
+.about-us-text-column > button > a {
+    color: #000;
+    text-decoration: none;
+}
 
+/* fifth section - parents */
+
+#fifth-section {
+    display: flex;
+    padding: 0px 80px 60px 80px;
+    text-align: center;
+    background: var(--primary-color);
+    margin-top: -5px;
+}
+
+@media (max-width: 600px) {
+    #fifth-section {
+        display: block;
+    }
+}
+
+.parents-image-column {
+    float: left;
+    max-width: 50%;
+}
+
+.parents-image-column > img{
+    width:29em;
+}
+
+.parents-text-column {
+    float: right;
+    margin: 60px auto auto 40px;
+    max-width: 50%;
+}
+
+.parents-text-column > hr {
+    border-color: #2c2300;
+}
+
+.parents-text-column h2 {
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    font-size: 4em;
+    color:#2c2300;
+}
+
+.parents-text-column > p {
+    color:#2c2300;
+    font-size: 1.4em;
+    font-weight: 400;
+}
+
+.parents-text-column > button {
+    background:#2c2300;
+    font: normal 1.1em var(--text-font);
+    color: var(--primary-color);
+    text-decoration: none;
+    padding: 13px 0 15px 0;
+    width: 50%;
+    border: none;
+    border-radius: 8px;
+    outline: none;
+    cursor: pointer;
+    transition: .4s;
+}
+.parents-text-column button:hover {
+    filter: brightness(75%);
+    animation: floating2 5s infinite ease-in-out;
+}
+
+.parents-text-column > button > a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+/* sixth section - game */
+
+#sixth-section {
+    display: flex;
+    padding: 0px 80px 0 80px;
+    text-align: center;
+}
+
+@media (max-width: 600px) {
+    #sixth-section {
+        display: block;
+    }
+}
+
+.games-image-column {
+    float: left;
+    max-width: 50%;
+}
+
+.games-image-column > img{
+    width:30em;
+}
+
+.games-text-column {
+    float: right;
+    margin: 110px auto auto 40px;
+    max-width: 50%;
+}
+.games-text-column h2 {
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    font-size: 4em;
+    color: var(--primary-color);
+}
+
+.games-text-column > p {
+    color: #fff;
+    font-size: 1.4em;
+    font-weight: 300;
+}
+
+.games-text-column > button {
+    background: var(--primary-color);
+    font: normal 1.1em var(--text-font);
+    color: #000;
+    text-decoration: none;
+    padding: 13px 0 15px 0;
+    width: 50%;
+    border: none;
+    border-radius: 8px;
+    outline: none;
+    cursor: pointer;
+    transition: .4s;
+}
+.games-text-column > button::after {
+    content: url(images/icons8-controller-32.png);
+    padding: 0px 0px 0px 10px;
+}
+.games-text-column button:hover {
+    filter: brightness(75%);
+    animation: floating2 5s infinite ease-in-out;
+}
+
+.games-text-column > button > a {
+    color: #000;
+    text-decoration: none;
+}
+
+/* seventh section - contact */
+
+
+#seventh-section {
+    color: #fff;
+    font: 500 1.1em var(--text-font);
+    margin: 100px 0;
+}
+
+.form-span {
+    color: #ff0000;
+}
+
+#form {
+    margin-left: 550px;
+    padding: 10px;
+}
 
 /* footer */
 #footer {
@@ -473,7 +636,7 @@ hr {
     right: 10px; 
     z-index: 999;
     width: 65px;
-    background: var(--bc-color);
+    background: var(--secundary-color);
     border: none; 
     outline: none; 
     cursor: pointer; 
@@ -483,13 +646,13 @@ hr {
   }
 
   #myBtn:hover {
-    opacity: 60%;
+    opacity: 75%;
   }
 
 /* scrollbar style */
 
 ::-webkit-scrollbar {
-      background: var(--primary-color);
+      background: var(--secundary-color);
   }
 
   ::-webkit-scrollbar-track {
