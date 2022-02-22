@@ -30,5 +30,9 @@ function topFunction() {
   document.documentElement.scrollTop = 0;
 }
 
-
 window.navigator.vibrate(200);
+
+document.querySelector('#frm').addEventListener('submit', e => {
+  e.preventDefault();
+  e.currentTarget.classList.add('submitted');
+});

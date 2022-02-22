@@ -325,7 +325,7 @@ body {
     .deepweb-article, .invpriv-article, .lgpd-article, .roubodados-article {
         text-align: center;
         width: 80%;
-        margin-left: 15px;
+        margin-left: 40px;
     }    
 }
 
@@ -400,12 +400,6 @@ hr {
     text-align: center;
 }
 
-@media (max-width: 600px) {
-    #fourth-section {
-        display: block;
-    }
-}
-
 .about-us-image-column {
     float: left;
     max-width: 50%;
@@ -415,16 +409,42 @@ hr {
     width:39em;
 }
 
+@media (max-width: 600px) {
+    .about-us-image-column > img{
+        display: none;
+    }
+}
+
 .about-us-text-column {
     float: right;
     margin: 130px auto auto 40px;
     max-width: 50%;
 }
+
+@media (max-width: 600px) {
+    .about-us-text-column {
+        all: unset;
+        padding: 20px 0 80px 0;
+    }
+}
+
+@media (max-width: 600px) {
+    .about-us-text-column > img{
+        display: none;
+    }
+}
+
 .about-us-text-column h2 {
     margin-bottom: 10px;
     text-transform: uppercase;
     font-size: 4em;
     color: var(--primary-color);
+}
+
+@media (max-width: 600px) {
+    .about-us-text-column h2 {
+        font-size: 3em;
+    }
 }
 
 .about-us-text-column > p {
@@ -446,6 +466,14 @@ hr {
     cursor: pointer;
     transition: .4s;
 }
+
+@media (max-width: 600px) {
+    .about-us-text-column > button {
+        width: 90%;
+        padding: 16px 0 17px 0;
+     }
+ }
+
 .about-us-text-column button:hover {
     filter: brightness(75%);
     animation: floating2 5s infinite ease-in-out;
@@ -468,6 +496,7 @@ hr {
 
 @media (max-width: 600px) {
     #fifth-section {
+        padding: 20px 80px 90px 80px;
         display: block;
     }
 }
@@ -481,10 +510,22 @@ hr {
     width:29em;
 }
 
+@media (max-width: 600px) {
+    .parents-image-column > img{
+        display: none;
+    }
+}
+
 .parents-text-column {
     float: right;
     margin: 60px auto auto 40px;
     max-width: 50%;
+}
+
+@media (max-width: 600px) {
+    .parents-text-column {
+        all: unset;
+    }
 }
 
 .parents-text-column > hr {
@@ -496,6 +537,12 @@ hr {
     text-transform: uppercase;
     font-size: 4em;
     color:#2c2300;
+}
+
+@media (max-width: 600px) {
+    .parents-text-column h2 {
+        font-size: 3em;
+    }
 }
 
 .parents-text-column > p {
@@ -517,6 +564,14 @@ hr {
     cursor: pointer;
     transition: .4s;
 }
+
+@media (max-width: 600px) {
+    .parents-text-column > button {
+        width: 90%;
+        padding: 16px 0 17px 0;
+     }
+ }
+
 .parents-text-column button:hover {
     filter: brightness(75%);
     animation: floating2 5s infinite ease-in-out;
@@ -535,11 +590,6 @@ hr {
     text-align: center;
 }
 
-@media (max-width: 600px) {
-    #sixth-section {
-        display: block;
-    }
-}
 
 .games-image-column {
     float: left;
@@ -550,17 +600,36 @@ hr {
     width:30em;
 }
 
+@media (max-width: 600px) {
+    .games-image-column > img{
+        display: none;
+    }
+}
+
 .games-text-column {
     float: right;
     margin: 110px auto auto 40px;
     max-width: 50%;
 }
+
+@media (max-width: 600px) {
+    .games-text-column {
+         all: unset;
+     }
+ }
+
 .games-text-column h2 {
     margin-bottom: 10px;
     text-transform: uppercase;
     font-size: 4em;
     color: var(--primary-color);
 }
+
+@media (max-width: 600px) {
+    .games-text-column h2 {
+         font-size: 3em;
+     }
+ }
 
 .games-text-column > p {
     color: #fff;
@@ -581,6 +650,14 @@ hr {
     cursor: pointer;
     transition: .4s;
 }
+
+@media (max-width: 600px) {
+    .games-text-column > button {
+        width: 90%;
+        padding: 16px 0 17px 0;
+     }
+ }
+
 .games-text-column > button::after {
     content: url(images/icons8-controller-32.png);
     padding: 0px 0px 0px 10px;
@@ -615,6 +692,12 @@ hr {
     margin-bottom: 0;
 }
 
+@media (max-width: 600px) {
+    #seventh-section > h2 {
+         font: normal 3em var(--text-font);
+     }
+ }
+
 #seventh-section > p {
     text-align: center;
     font: normal .9em var(--title-font);
@@ -630,6 +713,12 @@ hr {
     transition: margin .5s, padding .5s;
 }
 
+@media (max-width: 600px) {
+    #form {
+        margin-left: 30px;
+     }
+ }
+
 #form label {
     padding-bottom: 10px;
 }
@@ -642,6 +731,15 @@ hr {
     border-radius: 3px;
     outline: none;
     font: normal .9em var(--title-font);
+}
+
+#form input:focus, textarea:focus {
+    border: 2px solid var(--primary-color);
+    height: 25px;
+}
+
+#form textarea:focus {
+    height: unset;
 }
 
 ::placeholder {
