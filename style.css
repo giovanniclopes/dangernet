@@ -767,6 +767,73 @@ hr {
 #contact-btn:hover {
     filter: brightness(75%);
 }
+
+/* thanks page */
+
+.thanks-section {
+    color: var(--secundary-color);
+    text-align: center;
+    margin: 110px auto 20px auto;
+}
+
+@media (max-width:600px) {
+    .thanks-section {
+        margin: 40px auto 10px auto;
+    }
+}
+
+.thanks-title {
+    font-size: 3em;
+    color: var(--light-color);
+    margin: 30px auto 10px auto;
+}
+.thanks-text {
+    margin: 0;
+    font-size: 1.6em;
+    color: var(--light-color);
+  }
+
+.thanks-btn {
+    font: inherit;
+    font-weight: bold;
+    background: linear-gradient(180deg,#ffce00, #a38300);
+    color: var(--secundary-color);
+    text-align: center;
+    margin: 20px;
+    width: 20%;
+    padding: 15px;
+    border: none;
+    border-radius: 10px;
+    outline: none;
+    cursor: pointer;
+    transition: .4s;
+}
+
+@media (max-width: 600px) {
+    .thanks-title {
+        font-size: 2.1em;
+    }
+    .thanks-text {
+        font-size: 1.3em;
+      }    
+    .thanks-btn {
+        width: 60%;
+    }
+}
+
+.thanks-btn:hover {
+    filter: brightness(60%);
+  }
+
+.thanks-icon {
+  animation: flash 3s infinite cubic-bezier(.8,2,1,1);  
+}
+@keyframes flash {
+  50% {
+    opacity: 70%;
+  }
+}
+
 /* footer */
 #footer {
     display: flex;
