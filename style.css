@@ -15,7 +15,7 @@ body {
     width: 100%;
     background: var(--secundary-color);
     font-family: var(--text-font);
-    color: var(--secundary-color);
+    color: var(--light-color);
 }
 
 /*menu*/
@@ -768,6 +768,73 @@ hr {
     filter: brightness(75%);
 }
 
+/* about us page */
+
+#about-section1 {
+    background: url(images/about-us-section1.webp) no-repeat;
+    background-size: cover;
+    height: 86vh;
+    padding: 20px;
+    font-weight: bold;
+    color: var(--light-color);
+    text-align: center;
+    line-height: 30px;
+}
+
+@media (max-width: 600px) {
+    #about-section1 {
+        line-height: normal;
+        font-size: 1.3em;
+    }
+}
+
+#about-section1 h1 {
+    padding-top: 180px;
+    font-size: 5em;
+    color: var(--primary-color);
+    text-transform: uppercase;
+}
+
+@media (max-width: 600px) {
+    #about-section1 h1 {
+        padding-top: 150px;
+        font-size: 3em;
+    }
+}
+
+#about-section2 {
+    display: flex;
+    margin: 50px auto;
+    padding: 50px;
+}
+
+.about-section2-text-left {
+    float: left;
+    width: 50%;
+    text-align: center;
+}
+
+.about-section2-text-left h2 {
+    color: var(--primary-color);
+    font-size: 1.8em;
+}
+
+.about-section2-text-left p {
+    color: #fff;
+    font-size: 1.3em;
+}
+
+.about-section2-image-right {
+    float: right;
+    width: 50%;
+}
+
+.about-section2-image-right > img {
+    border-radius: 20px;
+    max-width: 95%;
+}
+
+
 /* thanks page */
 
 .thanks-section {
@@ -820,6 +887,8 @@ hr {
         width: 60%;
     }
 }
+
+
 
 .thanks-btn:hover {
     filter: brightness(60%);
