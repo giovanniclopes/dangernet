@@ -914,6 +914,19 @@ button#contact-btn {
     max-width: 550px;
 }
 
+@media (max-width: 600px) {
+    .about-section2-text-left {
+        all: unset;
+        text-align: center;
+    }       
+    .about-section2-image-right {
+        all: unset;
+    }    
+    .about-section2-image-right > img {
+        display: none;
+    }
+}
+
 #about-section3 {
     background: url(images/about-us-section3.webp) no-repeat center;
     background-size: cover;
@@ -928,6 +941,15 @@ button#contact-btn {
 
 #about-section3 p {
     font: normal 1.3em var(--text-font);
+}
+@media (max-width: 600px) {
+    #about-section3 h2 {
+        font: bold 1.4em var(--title-font);
+    }
+    #about-section3 p {
+        font: normal 1em var(--title-font);
+        margin: 10px 10px 20px 10px;
+    }
 }
 
 #about-section3 button {
@@ -1011,8 +1033,9 @@ button#contact-btn {
 
 .parents-blocks1 {
     display: flex;
-    margin: 50px;
+    margin: 50px auto 5px auto;
     gap: 80px;
+    border-bottom: 2px solid var(--primary-color);
 }
 
 @media (max-width: 600px) {
@@ -1085,7 +1108,6 @@ button#contact-btn {
 .knowledge-block-left {
     float: left;
     width: 33.3%;
-    background: #000;
 }
 
 .vpn-block-center{
