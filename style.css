@@ -1126,6 +1126,171 @@ button#contact-btn {
     }
 }
 
+/* games page */
+
+#games-section1 {
+    background: url(images/games-section1.webp) no-repeat;
+    background-size: cover;
+    height: 79vh;
+    padding: 20px;
+    font-weight: bold;
+    color: var(--light-color);
+    text-align: center;
+    line-height: 30px;
+}
+
+@media (max-width: 600px) {
+    #games-section1 {
+        line-height: normal;
+        font-size: 1.3em;
+    }
+}
+
+#games-section1 h1 {
+    padding-top: 180px;
+    font-size: 5em;
+    color: var(--primary-color);
+    text-transform: uppercase;
+}
+
+@media (max-width: 600px) {
+    #games-section1 h1 {
+        padding-top: 130px;
+        font-size: 3em;
+    }
+}
+
+#games-section2 {
+    background: var(--primary-color);
+    color: var(--secundary-color);
+    font: 500 1.3em var(--text-font);
+    text-align: center;
+    padding: 10px;
+}
+
+#games-section2 h2:before {
+    content: url(images/icons8-danger-32.png);
+    margin-right: 10px;
+}
+#games-section2 h2:after {
+    content: url(images/icons8-danger-32.png);
+    margin-left: 10px;
+}
+
+/* articles page */
+
+.articles-section1-title {
+    font: bold 1.6em var(--text-font);
+    color: var(--primary-color);
+    padding: 20px;
+}
+
+.articles-blocks {
+    display: flex;
+    align-items: center;
+    align-content: center;
+    color: var(--secundary-color);
+}
+
+@media (max-width: 600px) {
+    .articles-blocks {
+        display: grid;
+    }
+}
+
+.articles-deepweb-article, .articles-invpriv-article, .articles-lgpd-article, .articles-roubodados-article {
+    background: #131313;
+    border: 1px solid var(--primary-color);
+    border-top: 10px;
+    margin: 15px;
+    width: 100%;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 20px 10px 5px rgba(0, 0, 0, 0.37);
+}
+
+.articles-deepweb-article h1, .articles-invpriv-article h1, .articles-lgpd-article h1, .articles-roubodados-article h1 {
+    color: var(--primary-color);
+    text-align: center;
+}
+.articles-deepweb-article p, .articles-invpriv-article p, .articles-lgpd-article p, .articles-roubodados-article p {
+    padding: 20px;
+}
+
+.articles-deepweb-article:hover, .articles-invpriv-article:hover, .articles-lgpd-article:hover, .articles-roubodados-article:hover {
+    animation: floating 3s infinite ease-in-out;
+    transition: .4s;
+}
+
+@media (max-width: 600px) {
+    .articles-deepweb-article, .articles-invpriv-article, .articles-lgpd-article, .articles-roubodados-article {
+        text-align: center;
+        width: 80%;
+        margin-left: 40px;
+    }    
+}
+
+@keyframes floating {
+    0% { transform: translate(0,  0px); }
+    50%  { transform: translate(0, 15px); }
+    100%   { transform: translate(0, -0px); }   
+}
+@keyframes floating2 {
+    0% { transform: translate(0,  0px); }
+    50%  { transform: translate(0,5px); }
+    100%   { transform: translate(0, -0px); }   
+}
+@keyframes floating3 {
+    0% { transform: translate(0,  0px); }
+    50%  { transform: translate(0,2px); }
+    100%   { transform: translate(0, -0px); }   
+}
+
+.articles-deepweb-column1 img, .articles-invpriv-column1 img, .articles-lgpd-column1 img, .articles-roubodados-column1 img {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    border-radius: 10px 10px 1px 1px;
+}
+
+.articles-deepweb-column2, .articles-invpriv-column2, .articles-lgpd-column2, .articles-roubodados-column2 {
+    background: #131313;
+    color: #fff;
+    width: 100%;
+    padding: 20px 0px 20px -1px;
+    border-radius: 0 0 5px 5px;
+}
+
+hr {
+    width: 30%;
+    border: 1px solid #808080;
+    border-radius: 20px;
+    outline: none;
+}
+
+.articles-deepweb-article button, .articles-invpriv-article button, .articles-lgpd-article button, .articles-roubodados-article button {
+    width: 100%;
+    border: none;
+    outline: none;
+    background: var(--primary-color);
+    padding: 15px;
+    margin-top: 10px;
+    border-radius: 1px 1px 5px 5px;
+    font: inherit;
+    font-weight: bold;
+}
+
+.articles-deepweb-article button:hover, .articles-invpriv-article button:hover, .articles-lgpd-article button:hover, .articles-roubodados-article button:hover {
+    cursor: pointer;
+    filter: brightness(80%);
+}
+
+@media (max-width: 600px) {
+    .articles-deepweb-article button, .articles-invpriv-article button, .articles-lgpd-article button, .articles-roubodados-article button {
+        padding: 20px;
+    }
+}
+
 /* thanks page */
 
 .thanks-section {
