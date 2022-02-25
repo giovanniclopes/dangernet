@@ -1076,6 +1076,7 @@ button#contact-btn {
 @media (max-width: 600px) {
     .verification-block-left, .control-block-center, .protection-block-right {
         all: unset;
+        margin: 20px;
     }
 }
 
@@ -1165,7 +1166,12 @@ button#contact-btn {
     color: var(--secundary-color);
     font: 500 1.3em var(--text-font);
     text-align: center;
-    padding: 10px;
+}
+
+@media (max-width: 600px) {
+    #games-section2 {
+        font-size: 1em;
+    }
 }
 
 #games-section2 h2:before {
