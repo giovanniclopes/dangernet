@@ -20,6 +20,14 @@ body {
 }
 
 /*menu*/
+@media (max-width: 600px){
+    .logo-github {
+        display: none;
+    }
+}
+.octo-arm:hover {
+    transform-origin: 130px 106px;
+}
 #logo-image {
     width: 60%;
 }
@@ -186,15 +194,26 @@ body {
 }
 
 #first-section h1 {
-    padding-top: 180px;
+    padding-top: 160px;
     font-size: 2.7em;
+    line-height: normal;
     color: var(--primary-color);
     text-transform: uppercase;
 }
 
+
 #first-section p {
     font-size: 1.2em;
     color: #fff;
+}
+
+@media (max-width: 958px) {
+    #first-section h1 {
+        padding-top: unset;
+    }
+    #first-section p {
+        padding-bottom: 50px;
+    }    
 }
 
 @media (max-width: 600px) {
