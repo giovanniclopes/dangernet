@@ -189,6 +189,7 @@ body {
 @media (max-width: 600px) {
     #first-section {
         line-height: normal;
+        height: 55vh;
         font-size: 1.3em;
     }
 }
@@ -229,19 +230,21 @@ body {
 /* second section */
 
 #second-section {
-    padding-bottom: 50px;
+    padding: 30px 20px;
 }
 
 #double-div {
     display: flex;
     text-align: center;
-    padding: 20px 0 20px;
+    padding: 20px 0;
 }
+
 
 .left-div {
     float: left;
     max-width: 50%;
 }
+
 
 .left-div h2 {
     color: var(--primary-color);
@@ -249,6 +252,7 @@ body {
 
 .left-div p {
     color: #fff;
+    font-size: 1.4em;
     padding-left: 40px;
     padding-right: 40px;
 }
@@ -260,10 +264,12 @@ body {
 
 .right-div h2 {
     color: var(--primary-color);
+    font-size: 2em;
 }
 
 .right-div p {
     color: #fff;
+    font-size: 1.4em;
     padding-left: 40px;
     padding-right: 40px;
 }
@@ -273,15 +279,21 @@ body {
 }
 
 @media (max-width: 600px) {
+    #double-div {
+        gap: 30px;
+    }    
     .right-div h2, .left-div h2 {
-        font-size: 1.1em;
+        font-size: 1.3em;
     }
     .right-div p, .left-div p {
         padding: 10px;
-        font-size: 1em;
+        font-size: 1.2em;
     }
     .svg-second-div {
         width: 65px;
+    }
+    .left-div svg, .right-div svg {
+        width: 40%;
     }
 }
 
