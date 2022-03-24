@@ -408,7 +408,7 @@ hr {
     outline: none;
 }
 
-.deepweb-article button, .invpriv-article button, .lgpd-article button, .roubodados-article button {
+.article-btn {
     width: 100%;
     border: none;
     outline: none;
@@ -419,13 +419,17 @@ hr {
     font-weight: bold;
 }
 
-.deepweb-article button:hover, .invpriv-article button:hover, .lgpd-article button:hover, .roubodados-article button:hover {
+.article-btn a {
+    all: unset;
+}
+
+.article-btn:hover {
     cursor: pointer;
     filter: brightness(80%);
 }
 
 @media (max-width: 600px) {
-    .deepweb-article button, .invpriv-article button, .lgpd-article button, .roubodados-article button {
+    .article-btn {
         padding: 20px;
     }
 }
@@ -1283,7 +1287,7 @@ button#contact-btn {
     100%   { transform: translate(0, -0px); }   
 }
 
-.articles-deepweb-column1 img, .articles-invpriv-column1 img, .articles-lgpd-column1 img, .articles-roubodados-column1 img {
+.articles-deepweb-column1, .articles-invpriv-column1, .articles-lgpd-column1, .articles-roubodados-column1  {
     width: 100%;
     margin: 0;
     padding: 0;
@@ -1296,6 +1300,10 @@ button#contact-btn {
     width: 100%;
     padding: 20px 0px 20px -1px;
     border-radius: 0 0 5px 5px;
+}
+
+.article-image {
+    border-radius: 3px;
 }
 
 hr {
