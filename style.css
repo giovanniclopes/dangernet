@@ -1306,6 +1306,8 @@ button#contact-btn {
     border-radius: 0 0 5px 5px;
 }
 
+
+
 .article-image {
     border-radius: 3px;
 }
@@ -1317,7 +1319,7 @@ hr {
     outline: none;
 }
 
-.articles-deepweb-article button, .articles-invpriv-article button, .articles-lgpd-article button, .articles-roubodados-article button {
+.article-page-btn {
     width: 100%;
     border: none;
     outline: none;
@@ -1330,15 +1332,53 @@ hr {
     transition: .4s;
 }
 
-.articles-deepweb-article button:hover, .articles-invpriv-article button:hover, .articles-lgpd-article button:hover, .articles-roubodados-article button:hover {
+.article-page-btn:hover {
     cursor: pointer;
     filter: brightness(75%);
 }
 
+.article-page-btn a {
+    all: unset;
+}
+
 @media (max-width: 600px) {
-    .articles-deepweb-article button, .articles-invpriv-article button, .articles-lgpd-article button, .articles-roubodados-article button {
+    .article-page-btn {
         padding: 20px;
     }
+}
+
+/* all articles */
+
+.all-articles {
+
+}
+
+/* deep web page */
+
+#deepweb-section1 {
+    background: url(/images/bg-deepweb-section1.webp);
+    padding: 120px 0;
+    text-align: center;
+}
+
+#deepweb-section1 h1 {
+    font: bold 4.5em var(--text-font);
+    color: var(--primary-color);
+    margin: 20px 0;
+}
+
+#deepweb-section1 p {
+    margin: 20px 0;
+    font: normal 1.3em var(--title-font);
+}
+
+#deepweb-articles h1 {
+    font: bold 1.5em var(--title-font);
+    color: var(--primary-color);
+}
+
+#deepweb-articles hr {
+    margin: unset;
 }
 
 /* thanks page */
@@ -1393,8 +1433,6 @@ hr {
         width: 60%;
     }
 }
-
-
 
 .thanks-btn:hover {
     filter: brightness(60%);
