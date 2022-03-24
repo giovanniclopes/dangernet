@@ -9,6 +9,12 @@
     --text-font: 'Oswald', sans-serif;
 }
 
+*::selection {
+    color: var(--primary-color);
+    background: #252213;
+    text-shadow: 3px 5px 20px #252213;
+} 
+
 body {
     scroll-behavior: smooth;
     margin: 0;
@@ -339,7 +345,7 @@ body {
 
 .deepweb-article, .invpriv-article, .lgpd-article, .roubodados-article {
     background: #fff;
-    border: 1px solid var(--primary-color);
+    border: none;
     padding-top: 20px;
     margin: 15px;
     width: 100%;
@@ -350,8 +356,7 @@ body {
 }
 
 .deepweb-article:hover, .invpriv-article:hover, .lgpd-article:hover, .roubodados-article:hover {
-    animation: floating 3s infinite ease-in-out;
-    transition: .4s;
+    animation: floating 20s infinite ease-in-out;
 }
 
 @media (max-width: 600px) {
@@ -364,7 +369,7 @@ body {
 
 @keyframes floating {
     0% { transform: translate(0,  0px); }
-    50%  { transform: translate(0, 15px); }
+    50%  { transform: translate(0, 5px); }
     100%   { transform: translate(0, -0px); }   
 }
 @keyframes floating2 {
@@ -1201,6 +1206,12 @@ button#contact-btn {
     color: var(--secundary-color);
     font: 500 1.3em var(--text-font);
     text-align: center;
+    height: 60px;
+    margin: 30px 10px;
+    border-radius: 7px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 @media (max-width: 600px) {
@@ -1211,10 +1222,14 @@ button#contact-btn {
 
 #games-section2 h2:before {
     content: url(images/icons8-danger-32.png);
+    position: relative;
+    top: 5px;
     margin-right: 10px;
 }
 #games-section2 h2:after {
     content: url(images/icons8-danger-32.png);
+    position: relative;
+    top: 5px;
     margin-left: 10px;
 }
 
@@ -1241,8 +1256,9 @@ button#contact-btn {
 
 .articles-deepweb-article, .articles-invpriv-article, .articles-lgpd-article, .articles-roubodados-article {
     background: #131313;
-    border: 1px solid var(--primary-color);
-    border-top: 10px;
+    border: 2px solid var(--primary-color);
+    padding-top: 20px;
+    border-top: 0;
     margin: 15px;
     width: 100%;
     text-align: center;
@@ -1250,16 +1266,8 @@ button#contact-btn {
     box-shadow: 20px 10px 5px rgba(0, 0, 0, 0.37);
 }
 
-.articles-deepweb-article h1, .articles-invpriv-article h1, .articles-lgpd-article h1, .articles-roubodados-article h1 {
-    color: var(--primary-color);
-    text-align: center;
-}
-.articles-deepweb-article p, .articles-invpriv-article p, .articles-lgpd-article p, .articles-roubodados-article p {
-    padding: 20px;
-}
-
 .articles-deepweb-article:hover, .articles-invpriv-article:hover, .articles-lgpd-article:hover, .articles-roubodados-article:hover {
-    animation: floating 3s infinite ease-in-out;
+    filter: brightness(75%);
     transition: .4s;
 }
 
@@ -1271,20 +1279,16 @@ button#contact-btn {
     }    
 }
 
-@keyframes floating {
-    0% { transform: translate(0,  0px); }
-    50%  { transform: translate(0, 15px); }
-    100%   { transform: translate(0, -0px); }   
+.articles-deepweb-article img, .articles-invpriv-article img, .articles-lgpd-article img, .articles-roubodados-article img {
+    border-radius: 4px;
 }
-@keyframes floating2 {
-    0% { transform: translate(0,  0px); }
-    50%  { transform: translate(0,5px); }
-    100%   { transform: translate(0, -0px); }   
+
+.articles-deepweb-article h1, .articles-invpriv-article h1, .articles-lgpd-article h1, .articles-roubodados-article h1 {
+    color: var(--primary-color);
+    text-align: center;
 }
-@keyframes floating3 {
-    0% { transform: translate(0,  0px); }
-    50%  { transform: translate(0,2px); }
-    100%   { transform: translate(0, -0px); }   
+.articles-deepweb-article p, .articles-invpriv-article p, .articles-lgpd-article p, .articles-roubodados-article p {
+    padding: 20px;
 }
 
 .articles-deepweb-column1, .articles-invpriv-column1, .articles-lgpd-column1, .articles-roubodados-column1  {
@@ -1323,11 +1327,12 @@ hr {
     border-radius: 1px 1px 5px 5px;
     font: inherit;
     font-weight: bold;
+    transition: .4s;
 }
 
 .articles-deepweb-article button:hover, .articles-invpriv-article button:hover, .articles-lgpd-article button:hover, .articles-roubodados-article button:hover {
     cursor: pointer;
-    filter: brightness(80%);
+    filter: brightness(75%);
 }
 
 @media (max-width: 600px) {
