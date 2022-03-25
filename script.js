@@ -1,34 +1,3 @@
-var security = prompt('Você se considera protegido na internet?');
-
-if (security === 'sim') {
-  alert('Parabéns, é um grande passo!');
-}
-
-else if (security === 'Sim') {
-  alert('Parabéns, é um grande passo!');
-}
-
-else if (security === 'não') {
-  alert('É melhor você se proteger.');
-}
-
-else if (security === 'Não') {
-  alert('É melhor você se proteger.');
-}
-
-else if (security === 'nao') {
-  alert('É melhor você se proteger.');
-}
-
-else if (security === 'Nao') {
-  alert('É melhor você se proteger.');
-}
-
-else {
-   alert('Algo deu errado :(    ' + '\n' + '\n' + Math.LOG2E + '\n' + Math.PI + '\n' + Math.SQRT1_2);
-}
-
-
 const btnMobile = document.getElementById('btn-mobile');
 function toggleMenu(event) {
   if (event.type === 'touchstart') event.preventDefault();
