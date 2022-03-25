@@ -1347,38 +1347,46 @@ hr {
     }
 }
 
-/* all articles */
+/* all articles pages */
 
-.all-articles {
-
-}
-
-/* deep web page */
-
-#deepweb-section1 {
+.all-div-section1 {
     background: url(/images/bg-deepweb-section1.webp);
     padding: 120px 0;
     text-align: center;
 }
 
-#deepweb-section1 h1 {
+.all-div-section1 h1 {
     font: bold 4.5em var(--text-font);
     color: var(--primary-color);
     margin: 20px 0;
 }
 
-#deepweb-section1 p {
+
+.all-div-section1 p {
     margin: 20px 0;
     font: normal 1.3em var(--title-font);
 }
 
-#deepweb-articles h1 {
+@media(max-width: 600px) {
+    .all-div-section1 h1 {
+        font-size: 3em;
+    }
+}
+
+.all-pages-articles {
+    padding: 50px 80px;
+    display: grid;
+    gap: 25px;
+}
+
+.all-pages-articles h1 {
     font: bold 1.5em var(--title-font);
     color: var(--primary-color);
 }
 
-#deepweb-articles hr {
+.all-pages-articles hr {
     margin: unset;
+    width: 20%;
 }
 
 /* thanks page */
